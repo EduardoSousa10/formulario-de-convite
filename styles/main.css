@@ -2,6 +2,7 @@
     min-width: 51.25rem;
     display: grid;
     margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
     background-color: var(--shape-body);
     border-radius: 12px;
    
@@ -194,5 +195,6 @@ input[type="date"]{
     appearance: none;
     padding: 1rem;
     margin-bottom: 3rem;
+    color: white;
   }
 }

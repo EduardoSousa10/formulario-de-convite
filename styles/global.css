@@ -53,7 +53,14 @@ h3{
     --Heading-Md: 700 1.75rem var(--font-familyy);
     --Heading-Sm: 700 1.125rem var(--font-familyy);
 
-    --Body-Md: 300 1rem var(--font-familyyy);
+    --Body-Md: 600 1rem var(--font-familyyy);
     --Body-Sm: 400 .875rem var(--font-familyyy);
     --Body-Xs: 600 .75rem var(var--font-familyyy);
+}
+.field{
+    border-bottom: 1px solid var(--input-placeholder);
+    margin-bottom: 2.5rem;
+}
+a{
+    color: var(--brand-light);
 }

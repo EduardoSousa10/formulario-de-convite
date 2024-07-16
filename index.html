@@ -20,7 +20,7 @@
                     <form enctype="multipart/form-data">
                         <fieldset>
                             <legend>
-                                <img src="asstes/icons/calendar.svg" alt="">
+                                <img src="asstes/icons/calendar-new.png" alt="">
                                 <h2>Sobre o evento</h2>
                             </legend>
                             <div class="input-wrapper">
@@ -248,13 +248,15 @@
                                 </div>
                               </label>
                             </div>
+                          </div>
+                        </form>
                             <!-- tentativa -->
                             <div class="style-og"> <!-- form -->
                               <div class="style-wrapper"> 
                                 <div class="style-contact">
-                                  <label for="dark" style="font: var(--body-sm); color: var(--text-body);">Estilo</label>
+                                  <label for="toggle" style="font-family: var(--font-familyyy); font-size: .875rem; color: var(--text-body);">Estilo</label>
                                 </div>
-                                <div class="style-inner">
+                                <div class="style-inner inp-1">
                                   <label for="toggle" id="label-text">
                                     <input type="checkbox" name="toggle" id="toggle">
                                     <span class="style-copy">
@@ -265,19 +267,71 @@
                                   <span id="toggle-text" style="font: var(--Body-Sm); color: #f9f9f9;">Escuro</span>
                                 </div>
                               </div>
+                              <div class="file-wrapper">
+                                <div class="style-contact" id="foto">
+                                  <label for="file-id" style="font-family: var(--font-familyyy); font-size: .875rem; color: var(--text-body);">Foto de capa</label>
+                                </div>
+                                <div class="file-inner">
+                                  <label class="custom-file-label" for="file-id">
+                                    <img src="asstes/icons/upload-1.png" alt="">
+                                    Selecionar
+                                  </label>
+                                  <span class="file-name">Nenhum arquivo selecionado</span>
+                                  <input type="file" name="file-id" id="file-id">
+                                </div>
+                              </div>
                             </div>
-
-                             
-                             
-                            
-                       </div>
-                    </form>
+                       
+                   
 
                     <!--                    parte do contato                     -->
 
                     <form class="contact">
-
+                      <fieldset class="field">
+                        <legend>
+                          <img src="asstes/icons/contact-new.png" alt="contato">
+                          <h2>Dados para contato</h2>
+                        </legend>
+                        <div class="name-wrapper">
+                          <label for="your-name">Nome</label>
+                          <input type="text" id="your-name" name="your-name" placeholder="Nome completo">
+                        </div>
+                        <div class="name-inner">
+                          <div class="name-input inp-1">
+                            <label for="email">E-mail</label>
+                            <input type="text" id="email" name="email" placeholder="exemplo@email.com">
+                          </div>
+                          <div class="name-input inp-2">
+                            <label for="tel">Telefone</label>
+                            <input type="text" id="tel" name="tel" placeholder="(99)99999-9999">
+                          </div>
+                        </div>
+                      </fieldset>
                     </form>  
+                    <!-- Ultimo campo -->
+                    <form class="pessoal">
+                      
+                      <div class="pessoal-wrapper">
+                        <input type="checkbox" id="option1" name="options" value="1">
+                        <label for="option1">Li e concordo com os <a href="#">Termos e Condições</a> e com a <a href="#">Política de Privacidade</a></label>
+                      </div>
+                      <div class="pessoal-wrapper">
+                        <input type="checkbox" id="option2" name="options" value="2">
+                        <label for="option2">Aceito receber atualizações e promoções por e-mail</label>
+                      </div>
+                      <div class="pessoal-wrapper">
+                        <input type="checkbox" id="option3" name="options" value="3">
+                        <label for="option3">Aceito receber atualizações e promoções por SMS</label>
+                      </div>
+                    </form>
+
+                    <form>
+                      <label for="sub" class="submit">
+                        <img src="asstes/icons/ticket-now.png" alt="ticket">
+                        <input type="submit" value="Gerar convite" id="sub" name="sub">
+                      </label>
+                    </form>
+
                 </div>
             </main>
         </div>
@@ -303,6 +357,13 @@
           }
       });
   </script>
+   <script>
+    document.getElementById('file-id').addEventListener('change', function(event) {
+        const fileNameSpan = document.querySelector('.file-name');
+        const fileName = event.target.files.length > 0 ? event.target.files[0].name : 'Nenhum arquivo selecionado';
+        fileNameSpan.textContent = fileName;
+    });
+</script>
 
 </body>
 </html>
