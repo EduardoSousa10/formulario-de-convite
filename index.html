@@ -64,18 +64,19 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                        </div>
                                 </div>
-                            </form>
-                                <div class="location-wrapper inp-2">
+                            </div>
+                    
+                              <div class="location-wrapper inp-2">
                                         <label for="location">Local</label>
                                         <input type="text" name="location" id="location" placeholder="Link ou endereço">
-                                </div>
+                              </div>
                             </div>
                             <div class="textarea-wrapper">
                                 <label for="textarea">Descrição</label>
                                 <textarea name="textarea" id="textarea" placeholder="Escreva os detalhes do evento." rows="8"></textarea>
                             </div>
+                    </form>
                     
                     <form class="color-picker">
                     <fieldset>
@@ -134,12 +135,10 @@
     
                         </form>
                     </fieldset>
-                
           
-
                    <h3 style="margin-block: 1.75rem 1rem";>Tema do evento</h3>
 
-                        <form class="image-picker">
+                      <form class="image-picker">
                         <div class="tematic">
                             <div class="option">
                               <label>
@@ -249,8 +248,36 @@
                                 </div>
                               </label>
                             </div>
-                          </form> 
-                       </div> 
+                            <!-- tentativa -->
+                            <div class="style-og"> <!-- form -->
+                              <div class="style-wrapper"> 
+                                <div class="style-contact">
+                                  <label for="dark" style="font: var(--body-sm); color: var(--text-body);">Estilo</label>
+                                </div>
+                                <div class="style-inner">
+                                  <label for="toggle" id="label-text">
+                                    <input type="checkbox" name="toggle" id="toggle">
+                                    <span class="style-copy">
+                                      <div class="style-ball-1"></div>
+                                      <div class="style-ball-2"></div>
+                                    </span>
+                                  </label>
+                                  <span id="toggle-text" style="font: var(--Body-Sm); color: #f9f9f9;">Escuro</span>
+                                </div>
+                              </div>
+                            </div>
+
+                             
+                             
+                            
+                       </div>
+                    </form>
+
+                    <!--                    parte do contato                     -->
+
+                    <form class="contact">
+
+                    </form>  
                 </div>
             </main>
         </div>
@@ -265,5 +292,17 @@
             </div>
         </aside>
     </div>
+
+    <script>
+      document.getElementById('toggle').addEventListener('change', function() {
+          var toggleText = document.getElementById('toggle-text');
+          if (this.checked) {
+              toggleText.textContent = 'Claro';
+          } else {
+              toggleText.textContent = 'Escuro';
+          }
+      });
+  </script>
+
 </body>
 </html>
